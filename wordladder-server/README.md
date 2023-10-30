@@ -1,6 +1,6 @@
 # WordLadder Solver
 
-#### Responds to post requests with a list of the shortest path between two five letter words. 
+#### A haskell scotty app that Responds to post requests with a list of strings that is the shortest path between two five letter words. 
 
 #### If haskell is not installed visit this link https://www.haskell.org/ghcup/install/
 

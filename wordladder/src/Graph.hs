@@ -2,7 +2,7 @@ module Graph where
 
 type Graph = [(String, [String])]
 
--- [("amend",["emend","amens","abend"])]
+-- let g = [("amend",["emend","amens","abend"])]
 
 {-
   Compares two strings letter by letter outputting a bool on
@@ -17,7 +17,7 @@ isLetterOff w1 w2 = length (filter not (zipWith (==) w1 w2)) == 1
   those off by a letter.
 -}
 neighbours :: String -> [String] -> [String]
-neighbours word wordList = filter (\w -> isLetterOff w word) wordList
+neighbours word = filter (`isLetterOff` word)
 
 adjList :: [String] -> Graph
 adjList wordList = [(word, neighbours word wordList) | word <- wordList]

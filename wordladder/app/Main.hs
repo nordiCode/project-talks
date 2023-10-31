@@ -35,10 +35,11 @@ instance ToJSON WordPair where
         "end" .= second
       ]
 
-data ShortList = ShortList
+newtype ShortList = ShortList
   { wordList :: [String]
   }
   deriving (Eq, Show)
+
 
 instance FromJSON ShortList where
   parseJSON = withObject "ShortList" $ \o ->
